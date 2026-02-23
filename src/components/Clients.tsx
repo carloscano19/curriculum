@@ -86,7 +86,7 @@ export function Clients({ data }: { data?: any[] }) {
               ))}
             </Slider>
           ) : (
-            <p className="text-center text-slate-400">Add clients in the admin panel to see them here.</p>
+            <p className="text-center text-slate-400">No clients to display at the moment.</p>
           )}
         </div>
       </div>

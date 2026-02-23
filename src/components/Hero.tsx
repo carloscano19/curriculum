@@ -83,8 +83,8 @@ export function Hero({ data }: { data: any }) {
               <div className="absolute inset-0 bg-slate-900 rounded-[2rem] -rotate-3 opacity-10"></div>
               <div className="absolute inset-0 rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1758599543136-5977bf2dd922?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYWxlJTIwcG9ydHJhaXQlMjBidXNpbmVzcyUyMHN1aXQlMjBjb25maWRlbnR8ZW58MXx8fHwxNzcxNzAwNTczfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="Carlos Cano Fernández"
+                  src={data?.imageUrl || "https://images.unsplash.com/photo-1758599543136-5977bf2dd922?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYWxlJTIwcG9ydHJhaXQlMjBidXNpbmVzcyUyMHN1aXQlMjBjb25maWRlbnR8ZW58MXx8fHwxNzcxNzAwNTczfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"}
+                  alt={data?.title || "Carlos Cano Fernández"}
                   className="w-full h-full object-cover"
                 />
               </div>
