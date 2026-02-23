@@ -1,0 +1,113 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@11.6.2
+2 info using node@v24.13.0
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/carloscano/Desktop/CV definitivo/cv-admin-next/.npmrc
+5 silly config load:file:/Users/carloscano/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm install slick-carousel jose
+8 verbose argv "install" "slick-carousel" "jose"
+9 verbose logfile logs-max:10 dir:/Users/carloscano/Desktop/CV definitivo/cv-admin-next/.npm-cache/_logs/2026-02-22T17_04_53_297Z-
+10 verbose logfile /Users/carloscano/Desktop/CV definitivo/cv-admin-next/.npm-cache/_logs/2026-02-22T17_04_53_297Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly logfile done cleaning log files
+13 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+14 silly idealTree buildDeps
+15 silly fetch manifest slick-carousel@*
+16 silly packumentCache full:https://registry.npmjs.org/slick-carousel cache-miss
+17 http fetch GET 200 https://registry.npmjs.org/slick-carousel 390ms (cache miss)
+18 silly packumentCache full:https://registry.npmjs.org/slick-carousel set size:undefined disposed:false
+19 silly fetch manifest jquery@>=1.8.0
+20 silly packumentCache full:https://registry.npmjs.org/jquery cache-miss
+21 http fetch GET 200 https://registry.npmjs.org/jquery 230ms (cache miss)
+22 silly packumentCache full:https://registry.npmjs.org/jquery set size:undefined disposed:false
+23 silly fetch manifest jose@*
+24 silly packumentCache full:https://registry.npmjs.org/jose cache-miss
+25 http fetch GET 200 https://registry.npmjs.org/jose 75ms (cache miss)
+26 silly packumentCache full:https://registry.npmjs.org/jose set size:undefined disposed:false
+27 silly placeDep ROOT jose@6.1.3 OK for: cv-admin-next@0.1.0 want: *
+28 silly placeDep ROOT slick-carousel@1.8.1 OK for: cv-admin-next@0.1.0 want: *
+29 silly placeDep ROOT jquery@4.0.0 OK for: slick-carousel@1.8.1 want: >=1.8.0
+30 silly fetch manifest react@^16.8.0 || ^17.0.0 || ^18.0.0
+31 silly packumentCache full:https://registry.npmjs.org/react cache-miss
+32 http cache https://registry.npmjs.org/react 11ms (cache hit)
+33 silly packumentCache full:https://registry.npmjs.org/react set size:6508025 disposed:false
+34 verbose stack Error: could not resolve
+34 verbose stack     at PlaceDep.failPeerConflict (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/place-dep.js:503:25)
+34 verbose stack     at new PlaceDep (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/place-dep.js:157:21)
+34 verbose stack     at #buildDepStep (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:945:18)
+34 verbose stack     at async Arborist.buildIdealTree (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:182:7)
+34 verbose stack     at async Promise.all (index 1)
+34 verbose stack     at async Arborist.reify (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:114:5)
+34 verbose stack     at async Install.exec (/usr/local/lib/node_modules/npm/lib/commands/install.js:150:5)
+34 verbose stack     at async Npm.exec (/usr/local/lib/node_modules/npm/lib/npm.js:208:9)
+34 verbose stack     at async module.exports (/usr/local/lib/node_modules/npm/lib/cli/entry.js:67:5)
+35 error code ERESOLVE
+36 error ERESOLVE could not resolve
+37 error
+38 error While resolving: react-day-picker@8.10.1
+38 error Found: react@19.2.3[2m[22m
+38 error [2mnode_modules/react[22m
+38 error   [95mpeer[39m react@">=16.8.0" from @emotion/react@11.14.0[2m[22m
+38 error   [2mnode_modules/@emotion/react[22m
+38 error     [95mpeer[39m @emotion/react@"^11.0.0-rc.0" from @emotion/styled@11.14.1[2m[22m
+38 error     [2mnode_modules/@emotion/styled[22m
+38 error       peerOptional @emotion/styled@"^11.3.0" from @mui/material@7.3.8[2m[22m
+38 error       [2mnode_modules/@mui/material[22m
+38 error         [95mpeer[39m @mui/material@"^7.3.8" from @mui/icons-material@7.3.8[2m[22m
+38 error         [2mnode_modules/@mui/icons-material[22m
+38 error         1 more (the root project)
+38 error       3 more (@mui/styled-engine, @mui/system, the root project)
+38 error     peerOptional @emotion/react@"^11.5.0" from @mui/material@7.3.8[2m[22m
+38 error     [2mnode_modules/@mui/material[22m
+38 error       [95mpeer[39m @mui/material@"^7.3.8" from @mui/icons-material@7.3.8[2m[22m
+38 error       [2mnode_modules/@mui/icons-material[22m
+38 error         @mui/icons-material@"^7.3.8" from the root project
+38 error       1 more (the root project)
+38 error     3 more (@mui/styled-engine, @mui/system, the root project)
+38 error   [95mpeer[39m react@">=16.8.0" from @emotion/styled@11.14.1[2m[22m
+38 error   [2mnode_modules/@emotion/styled[22m
+38 error     peerOptional @emotion/styled@"^11.3.0" from @mui/material@7.3.8[2m[22m
+38 error     [2mnode_modules/@mui/material[22m
+38 error       [95mpeer[39m @mui/material@"^7.3.8" from @mui/icons-material@7.3.8[2m[22m
+38 error       [2mnode_modules/@mui/icons-material[22m
+38 error         @mui/icons-material@"^7.3.8" from the root project
+38 error       1 more (the root project)
+38 error     peerOptional @emotion/styled@"^11.3.0" from @mui/styled-engine@7.3.8[2m[22m
+38 error     [2mnode_modules/@mui/styled-engine[22m
+38 error       @mui/styled-engine@"^7.3.8" from @mui/system@7.3.8[2m[22m
+38 error       [2mnode_modules/@mui/system[22m
+38 error         @mui/system@"^7.3.8" from @mui/material@7.3.8[2m[22m
+38 error         [2mnode_modules/@mui/material[22m
+38 error     2 more (@mui/system, the root project)
+38 error   99 more (@emotion/use-insertion-effect-with-fallbacks, ...)
+38 error
+38 error Could not resolve dependency:
+38 error [95mpeer[39m react@"^16.8.0 || ^17.0.0 || ^18.0.0" from react-day-picker@8.10.1[2m[22m
+38 error [2mnode_modules/react-day-picker[22m
+38 error   react-day-picker@"^8.10.1" from the root project
+38 error
+38 error Conflicting peer dependency: react@18.3.1[2m[22m
+38 error [2mnode_modules/react[22m
+38 error   [95mpeer[39m react@"^16.8.0 || ^17.0.0 || ^18.0.0" from react-day-picker@8.10.1[2m[22m
+38 error   [2mnode_modules/react-day-picker[22m
+38 error     react-day-picker@"^8.10.1" from the root project
+38 error
+38 error Fix the upstream dependency conflict, or retry
+38 error this command with --force or --legacy-peer-deps
+38 error to accept an incorrect (and potentially broken) dependency resolution.
+39 error
+39 error
+39 error For a full report see:
+39 error /Users/carloscano/Desktop/CV definitivo/cv-admin-next/.npm-cache/_logs/2026-02-22T17_04_53_297Z-eresolve-report.txt
+40 silly unfinished npm timer reify 1771779893876
+41 silly unfinished npm timer reify:loadTrees 1771779893878
+42 silly unfinished npm timer idealTree:buildDeps 1771779894027
+43 silly unfinished npm timer idealTree:node_modules/react-day-picker 1771779894739
+44 verbose cwd /Users/carloscano/Desktop/CV definitivo/cv-admin-next
+45 verbose os Darwin 24.6.0
+46 verbose node v24.13.0
+47 verbose npm  v11.6.2
+48 verbose exit 1
+49 verbose code 1
+50 error A complete log of this run can be found in: /Users/carloscano/Desktop/CV definitivo/cv-admin-next/.npm-cache/_logs/2026-02-22T17_04_53_297Z-debug-0.log

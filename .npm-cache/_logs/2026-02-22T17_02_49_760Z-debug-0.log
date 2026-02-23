@@ -1,0 +1,68 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@11.6.2
+2 info using node@v24.13.0
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/carloscano/Desktop/CV definitivo/cv-admin-next/.npmrc
+5 silly config load:file:/Users/carloscano/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm install react-day-picker@8.10.1 react-resizable-panels@2.1.7 recharts@2.15.2
+8 verbose argv "install" "react-day-picker@8.10.1" "react-resizable-panels@2.1.7" "recharts@2.15.2"
+9 verbose logfile logs-max:10 dir:/Users/carloscano/Desktop/CV definitivo/cv-admin-next/.npm-cache/_logs/2026-02-22T17_02_49_760Z-
+10 verbose logfile /Users/carloscano/Desktop/CV definitivo/cv-admin-next/.npm-cache/_logs/2026-02-22T17_02_49_760Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+13 silly logfile done cleaning log files
+14 silly idealTree buildDeps
+15 silly fetch manifest react-day-picker@8.10.1
+16 silly packumentCache full:https://registry.npmjs.org/react-day-picker cache-miss
+17 http fetch GET 200 https://registry.npmjs.org/react-day-picker 278ms (cache revalidated)
+18 silly packumentCache full:https://registry.npmjs.org/react-day-picker set size:1112922 disposed:false
+19 silly fetch manifest date-fns@^4.1.0
+20 silly packumentCache full:https://registry.npmjs.org/date-fns cache-miss
+21 http fetch GET 200 https://registry.npmjs.org/date-fns 58ms (cache revalidated)
+22 silly packumentCache full:https://registry.npmjs.org/date-fns set size:3443779 disposed:false
+23 silly fetch manifest date-fns@^2.28.0 || ^3.0.0
+24 silly packumentCache full:https://registry.npmjs.org/date-fns cache-miss
+25 http cache https://registry.npmjs.org/date-fns 8ms (cache hit)
+26 silly packumentCache full:https://registry.npmjs.org/date-fns set size:3443779 disposed:false
+27 verbose stack Error: unable to resolve dependency tree
+27 verbose stack     at #failPeerConflict (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:1420:25)
+27 verbose stack     at #loadPeerSet (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:1386:33)
+27 verbose stack     at async #buildDepStep (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:929:11)
+27 verbose stack     at async Arborist.buildIdealTree (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:182:7)
+27 verbose stack     at async Promise.all (index 1)
+27 verbose stack     at async Arborist.reify (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:114:5)
+27 verbose stack     at async Install.exec (/usr/local/lib/node_modules/npm/lib/commands/install.js:150:5)
+27 verbose stack     at async Npm.exec (/usr/local/lib/node_modules/npm/lib/npm.js:208:9)
+27 verbose stack     at async module.exports (/usr/local/lib/node_modules/npm/lib/cli/entry.js:67:5)
+28 error code ERESOLVE
+29 error ERESOLVE unable to resolve dependency tree
+30 error
+31 error While resolving: cv-admin-next@0.1.0
+31 error Found: date-fns@4.1.0[2m[22m
+31 error [2mnode_modules/date-fns[22m
+31 error   date-fns@"^4.1.0" from the root project
+31 error
+31 error Could not resolve dependency:
+31 error [95mpeer[39m date-fns@"^2.28.0 || ^3.0.0" from react-day-picker@8.10.1[2m[22m
+31 error [2mnode_modules/react-day-picker[22m
+31 error   react-day-picker@"8.10.1" from the root project
+31 error
+31 error Fix the upstream dependency conflict, or retry
+31 error this command with --force or --legacy-peer-deps
+31 error to accept an incorrect (and potentially broken) dependency resolution.
+32 error
+32 error
+32 error For a full report see:
+32 error /Users/carloscano/Desktop/CV definitivo/cv-admin-next/.npm-cache/_logs/2026-02-22T17_02_49_760Z-eresolve-report.txt
+33 silly unfinished npm timer reify 1771779770423
+34 silly unfinished npm timer reify:loadTrees 1771779770425
+35 silly unfinished npm timer idealTree:buildDeps 1771779770566
+36 silly unfinished npm timer idealTree:#root 1771779770566
+37 verbose cwd /Users/carloscano/Desktop/CV definitivo/cv-admin-next
+38 verbose os Darwin 24.6.0
+39 verbose node v24.13.0
+40 verbose npm  v11.6.2
+41 verbose exit 1
+42 verbose code 1
+43 error A complete log of this run can be found in: /Users/carloscano/Desktop/CV definitivo/cv-admin-next/.npm-cache/_logs/2026-02-22T17_02_49_760Z-debug-0.log
