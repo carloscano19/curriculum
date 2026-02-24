@@ -31,8 +31,8 @@ export function Contact() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-1">Email</h3>
-                  <a href="mailto:carlos@example.com" className="text-slate-400 hover:text-blue-400 transition-colors">
-                    carlos.cano@example.com
+                  <a href="mailto:carlos.cano.fernandez@gmail.com" className="text-slate-400 hover:text-blue-400 transition-colors">
+                    carlos.cano.fernandez@gmail.com
                   </a>
                 </div>
               </div>
@@ -48,10 +48,20 @@ export function Contact() {
               </div>
 
               <div className="flex gap-4 mt-8">
-                <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition-colors">
+                <a
+                  href="https://www.linkedin.com/in/carlos-cano-fernandez-seo-aso-manager/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition-colors"
+                >
                   <Linkedin size={20} />
                 </a>
-                <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-black transition-colors">
+                <a
+                  href="https://github.com/carloscano19"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-black transition-colors"
+                >
                   <Github size={20} />
                 </a>
               </div>

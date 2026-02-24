@@ -34,9 +34,12 @@ export function Navbar() {
         }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <a href="#" className="text-2xl font-black text-slate-900 tracking-tighter shrink-0 mr-8 group flex items-center gap-1">
-          <span className="bg-blue-600 text-white px-2 py-0.5 rounded-md transform -rotate-3 group-hover:rotate-0 transition-transform">CCF</span>
-          <span className="text-slate-800">Cano</span>
+        <a href="#" className="shrink-0 mr-8 flex items-center">
+          <img
+            src="/Logo CCF adaptado.png"
+            alt="Logo CCF"
+            className="h-10 w-auto object-contain hover:opacity-80 transition-opacity"
+          />
         </a>
 
         {/* Desktop Menu */}
