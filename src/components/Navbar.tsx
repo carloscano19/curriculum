@@ -38,7 +38,7 @@ export function Navbar() {
           <img
             src="/Logo CCF adaptado.png"
             alt="Logo CCF"
-            className="h-10 w-auto object-contain hover:opacity-80 transition-opacity"
+            className="h-20 w-auto object-contain hover:opacity-80 transition-opacity"
           />
         </a>
 
