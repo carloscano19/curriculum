@@ -2,7 +2,7 @@ export const cvData = {
     hero: {
         title: "Carlos Cano Fernández",
         subtitle: "SEO/GEO Lead • Tracking Engineer (GTM s2s) • Digital Product Owner\nAI App Builder & Automation Specialist (Python • Claude Code • Antigravity)",
-        imageUrl: "/profile.jpg",
+        imageUrl: "/Foto mia landing.png",
         experienceYears: "14+"
     },
     about: {
