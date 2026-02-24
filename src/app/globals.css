@@ -2,6 +2,6 @@
 
 @source "../**/*.{js,ts,jsx,tsx}";
 
-@import "tw-animate-css";
+
 /* @import "../styles/fonts.css"; */
 @import "../styles/theme.css";
