@@ -5,7 +5,7 @@ export const cvData = {
         subtitle: "SEO/GEO Lead • Tracking Engineer (GTM s2s) • Digital Product Owner\nAI App Builder & Automation Specialist (Python • Claude Code • Antigravity)",
         imageUrl: "/Foto mia landing.png",
         experienceYears: "14+",
-        cvPdfUrl: "/CV Carlos Cano Fernandez.pdf"
+        cvPdfUrl: "/CV-Carlos-Cano-Fernandez.pdf"
     },
     about: {
         description: "Senior specialist in <span class=\"font-bold text-slate-900\">Technical SEO</span>, <span class=\"font-bold text-slate-900\">GEO (Generative Engine Optimization)</span> and <span class=\"font-bold text-slate-900\">data-driven growth strategies</span>. I combine advanced measurement expertise (<span class=\"text-blue-700 font-medium\">GTM client-side and server-side</span>, S2S events, pixel architecture), <span class=\"text-purple-700 font-medium\">AI-powered tool development</span> (Python, Claude Code, Google Antigravity) and real experience acting as a <span class=\"font-bold text-slate-900\">Product Owner</span> in web, SaaS and mobile environments.\n\nI build apps and automation workflows that improve digital marketing productivity (published on <span class=\"font-medium text-slate-900 underline decoration-slate-300 decoration-2 underline-offset-2\">GitHub</span>), design scalable data frameworks, implement advanced dashboards, and optimize content for both traditional search engines and modern LLMs (<span class=\"italic text-slate-600\">ChatGPT, Claude, Gemini, Perplexity</span>).\n\nMy approach is consistently data-driven, with deep specialization in <span class=\"font-bold text-slate-900\">tracking, automation, technical SEO</span> for complex platforms (web + app), and cross-functional team leadership.",

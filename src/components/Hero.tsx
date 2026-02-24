@@ -60,7 +60,7 @@ export function Hero({ data }: { data: any }) {
               </a>
               <a
                 href={data?.cvPdfUrl || "#"}
-                download="CV Carlos Cano Fernandez.pdf"
+                download="CV-Carlos-Cano-Fernandez.pdf"
                 className="px-8 py-4 bg-white text-slate-900 border border-slate-200 rounded-full font-medium hover:border-blue-200 hover:bg-blue-50 transition-all flex items-center justify-center gap-2 group print:hidden"
               >
                 Download CV
