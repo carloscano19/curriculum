@@ -39,16 +39,7 @@ export function About({ data }: { data?: any }) {
 
           <div className="text-lg text-slate-700 leading-loose space-y-6 text-justify md:text-left">
             {data?.description.split('\n\n').map((p: string, i: number) => (
-              <p key={i} dangerouslySetInnerHTML={{
-                __html: p.replace(/<span/g, '!!SPAN!!')
-                  .replace(/<\/span/g, '!!/SPAN!!')
-                // Since the data is now plain text, I'll just render it as is 
-                // or handle spans if I want to keep the bolding.
-                // Actually, I'll just use the text and maybe manual spans if needed.
-                // But for now, simple p tags is better.
-              }}>
-                {p}
-              </p>
+              <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
             ))}
           </div>
         </motion.div>

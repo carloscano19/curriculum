@@ -18,7 +18,7 @@ export default function Home() {
       <main>
         <Hero data={cvData.hero} />
         <About data={cvData.about} />
-        <Skills data={cvData.skills} />
+        <Skills data={cvData.specialization} />
         <CoreSoftSkills />
         <Clients data={cvData.clients} />
         <TechStack />
