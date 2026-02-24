@@ -155,17 +155,17 @@ export const cvData = {
         { name: "English", level: "Professional Proficiency", percentage: 85, color: "bg-blue-500" }
     ],
     clients: [
-        { name: "Real Madrid", logoUrl: "" },
-        { name: "Iberdrola", logoUrl: "" },
-        { name: "William Hill", logoUrl: "" },
-        { name: "Sportium", logoUrl: "" },
+        { name: "Real Madrid", logoUrl: "/real-madrid.png" },
+        { name: "Iberdrola", logoUrl: "/iberdrola.png" },
+        { name: "William Hill", logoUrl: "/william-hill.png" },
+        { name: "Sportium", logoUrl: "/Sportium.png" },
         { name: "Caser", logoUrl: "" },
         { name: "Parques Reunidos", logoUrl: "" },
-        { name: "P&G", logoUrl: "" },
+        { name: "P&G", logoUrl: "/P&G.png" },
         { name: "Barceló Hotels", logoUrl: "" },
         { name: "Mahou", logoUrl: "" },
-        { name: "Grupo Yoigo", logoUrl: "" },
-        { name: "Camper", logoUrl: "" }
+        { name: "Grupo Yoigo", logoUrl: "/Yoigo.png" },
+        { name: "Camper", logoUrl: "/camper.png" }
     ],
     skills: [
         { name: "React", category: "Frontend", icon: "react" },
