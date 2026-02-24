@@ -5,9 +5,6 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { ArrowRight, Download } from "lucide-react";
 
 export function Hero({ data }: { data: any }) {
-  const handleDownloadCV = () => {
-    window.print();
-  };
 
   const titleStr = data?.title || "Carlos Cano Fernández";
   const lastSpaceIdx = titleStr.lastIndexOf(' ');
@@ -61,13 +58,14 @@ export function Hero({ data }: { data: any }) {
                 Contact Me
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </a>
-              <button
-                onClick={handleDownloadCV}
+              <a
+                href={data?.cvPdfUrl || "#"}
+                download="CV Carlos Cano Fernandez.pdf"
                 className="px-8 py-4 bg-white text-slate-900 border border-slate-200 rounded-full font-medium hover:border-blue-200 hover:bg-blue-50 transition-all flex items-center justify-center gap-2 group print:hidden"
               >
                 Download CV
                 <Download size={18} className="group-hover:translate-y-1 transition-transform" />
-              </button>
+              </a>
             </div>
           </motion.div>
 
