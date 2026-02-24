@@ -31,8 +31,8 @@ export function Contact() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-1">Email</h3>
-                  <a href="mailto:carlos.cano.fernandez@gmail.com" className="text-slate-400 hover:text-blue-400 transition-colors">
-                    carlos.cano.fernandez@gmail.com
+                  <a href="mailto:carloscanorcl8@gmail.com" className="text-slate-400 hover:text-blue-400 transition-colors">
+                    carloscanorcl8@gmail.com
                   </a>
                 </div>
               </div>
