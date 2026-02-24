@@ -159,10 +159,10 @@ export const cvData = {
         { name: "Iberdrola", logoUrl: "/iberdrola.png" },
         { name: "William Hill", logoUrl: "/william-hill.png" },
         { name: "Caser", logoUrl: "/Caser.png" },
-        { name: "Parques Reunidos", logoUrl: "" },
+        { name: "Parques Reunidos", logoUrl: "/parques_reunidos.png" },
         { name: "P&G", logoUrl: "/P&G.png" },
-        { name: "Barceló Hotels", logoUrl: "" },
-        { name: "Mahou", logoUrl: "" },
+        { name: "Barceló Hotels", logoUrl: "/Barcelo-hotels.png" },
+        { name: "Mahou", logoUrl: "/mahou.png" },
         { name: "Grupo Yoigo", logoUrl: "/Yoigo.png" },
         { name: "Camper", logoUrl: "/camper.png" }
     ],
