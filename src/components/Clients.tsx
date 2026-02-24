@@ -3,6 +3,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { motion } from "motion/react";
 
 export function Clients({ data }: { data?: any[] }) {
@@ -14,6 +15,7 @@ export function Clients({ data }: { data?: any[] }) {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
+    arrows: false,
     responsive: [
       {
         breakpoint: 1024,
@@ -30,7 +32,8 @@ export function Clients({ data }: { data?: any[] }) {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
+          dots: true,
         },
       },
     ],
@@ -53,31 +56,22 @@ export function Clients({ data }: { data?: any[] }) {
           </p>
         </motion.div>
 
-        <div className="px-8">
+        <div className="px-4 md:px-8">
           {displayClients.length > 0 ? (
-            <Slider {...settings} className="-mx-4 pb-12">
+            <Slider {...settings} className="-mx-2 md:-mx-4 pb-12">
               {displayClients.map((client, index) => (
-                <div key={client.id || index} className="px-4 h-full">
-                  <div className="h-32 bg-slate-50 rounded-xl border border-slate-100 flex items-center justify-center p-6 hover:shadow-md transition-shadow group">
+                <div key={index} className="px-2 md:px-4 h-full">
+                  <div className="h-24 md:h-32 bg-slate-50 rounded-xl border border-slate-100 flex items-center justify-center p-4 md:p-6 hover:shadow-md transition-shadow group">
                     {client.logoUrl ? (
-                      <img
-                        src={client.logoUrl}
-                        alt={client.name}
-                        className="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all"
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          target.style.display = 'none';
-                          const parent = target.parentElement;
-                          if (parent) {
-                            const span = document.createElement('span');
-                            span.className = "text-xl font-bold text-slate-400 group-hover:text-slate-800 transition-colors text-center";
-                            span.innerText = client.name;
-                            parent.appendChild(span);
-                          }
-                        }}
-                      />
+                      <div className="relative w-full h-full flex items-center justify-center px-2">
+                        <ImageWithFallback
+                          src={client.logoUrl}
+                          alt={client.name}
+                          className="max-w-full max-h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+                        />
+                      </div>
                     ) : (
-                      <span className="text-xl font-bold text-slate-400 group-hover:text-slate-800 transition-colors text-center">
+                      <span className="text-sm md:text-xl font-bold text-slate-400 group-hover:text-slate-800 transition-colors text-center px-1">
                         {client.name}
                       </span>
                     )}
