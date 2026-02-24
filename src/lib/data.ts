@@ -3,7 +3,7 @@ export const cvData = {
         title: "Carlos Cano Fernández",
         subtitle: "SEO/GEO Lead • Tracking Engineer (GTM s2s) • Digital Product Owner\nAI App Builder & Automation Specialist (Python • Claude Code • Antigravity)",
         imageUrl: "/hero-image.jpg",
-        experienceYears: "13+"
+        experienceYears: "14+"
     },
     about: {
         description: "Senior specialist in Technical SEO, GEO (Generative Engine Optimization) and data-driven growth strategies. I combine advanced measurement expertise (GTM client-side and server-side, S2S events, pixel architecture), AI-powered tool development (Python, Claude Code, Google Antigravity) and real experience acting as a Product Owner in web, SaaS and mobile environments.\n\nI build apps and automation workflows that improve digital marketing productivity (published on GitHub), design scalable data frameworks, implement advanced dashboards, and optimize content for both traditional search engines and modern LLMs (ChatGPT, Claude, Gemini, Perplexity).\n\nMy approach is consistently data-driven, with deep specialization in tracking, automation, technical SEO for complex platforms (web + app), and cross-functional team leadership.",
