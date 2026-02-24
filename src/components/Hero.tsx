@@ -33,7 +33,7 @@ export function Hero({ data }: { data: any }) {
             className="flex-1 text-center md:text-left"
           >
             <span className="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-800 text-sm font-semibold mb-6">
-              Available for new opportunities
+              {data?.badge || "Elevating digital projects"}
             </span>
             <h1 className="text-5xl md:text-7xl font-bold text-slate-900 mb-6 leading-tight">
               {firstName} <br />
