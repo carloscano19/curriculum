@@ -24,6 +24,18 @@ jobs:
       - name: Build and Export
         run: npm run build
 
+      - name: Cleanup Hostinger Default Files
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOSTINGER_SSH_HOST }}
+          username: ${{ secrets.HOSTINGER_SSH_USER }}
+          password: ${{ secrets.HOSTINGER_SSH_PASSWORD }}
+          port: ${{ secrets.HOSTINGER_SSH_PORT || 2022 }}
+          script: |
+            rm -f public_html/default.php
+            rm -f public_html/index.php
+            rm -f public_html/php.ini
+
       - name: Deploy via SCP
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -31,7 +43,7 @@ jobs:
           username: ${{ secrets.HOSTINGER_SSH_USER }}
           password: ${{ secrets.HOSTINGER_SSH_PASSWORD }}
           port: ${{ secrets.HOSTINGER_SSH_PORT || 22 }}
-          source: "out/*"
+          source: "out/**"
           target: "public_html"
           strip_components: 1
           overwrite: true
