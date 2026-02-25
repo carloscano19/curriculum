@@ -16,10 +16,10 @@ export function Clients({ data }: { data?: any[] }) {
           className="text-center mb-16"
         >
           <span className="text-blue-600 font-bold uppercase tracking-widest text-sm mb-4 block">
-            TRAYECTORIA Y CONFIANZA
+            TRUST & EXPERIENCE
           </span>
           <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 max-w-3xl mx-auto leading-tight">
-            Marcas que han confiado en mi visión estratégica
+            Brands that have trusted my strategic vision
           </h2>
           <div className="w-20 h-1.5 bg-blue-600 mx-auto rounded-full mb-8"></div>
         </motion.div>
@@ -58,7 +58,7 @@ export function Clients({ data }: { data?: any[] }) {
                     {client.name}
                   </h3>
                   <p className="text-[10px] md:text-xs font-semibold text-slate-400 uppercase tracking-wider">
-                    {client.category || "CONSULTORÍA DIGITAL"}
+                    {client.category || "DIGITAL CONSULTANCY"}
                   </p>
                 </div>
               </motion.div>
