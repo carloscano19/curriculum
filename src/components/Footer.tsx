@@ -10,9 +10,6 @@ export function Footer() {
         <p className="text-sm">
           © {new Date().getFullYear()} Carlos Cano Fernández. {t({ en: "All rights reserved.", es: "Todos los derechos reservados." })}
         </p>
-        <p className="text-xs mt-2 opacity-50">
-          {t({ en: "Designed with ❤️ for Web Performance", es: "Diseñado con ❤️ para el Rendimiento Web" })}
-        </p>
       </div>
     </footer>
   );
