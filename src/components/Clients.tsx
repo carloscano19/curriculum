@@ -30,9 +30,9 @@ export function Clients({ data }: { data?: any[] }) {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 640,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1, // Full width on mobile for maximum visibility
           dots: true,
         },
       },
@@ -61,9 +61,9 @@ export function Clients({ data }: { data?: any[] }) {
             <Slider {...settings} className="-mx-2 md:-mx-4 pb-12">
               {displayClients.map((client, index) => (
                 <div key={index} className="px-2 md:px-4 h-full">
-                  <div className="h-24 md:h-32 bg-slate-50 rounded-xl border border-slate-100 flex items-center justify-center p-4 md:p-6 hover:shadow-md transition-shadow group">
+                  <div className="h-40 md:h-32 bg-slate-50 rounded-xl border border-slate-100 flex items-center justify-center p-2 md:p-6 hover:shadow-md transition-shadow group">
                     {client.logoUrl ? (
-                      <div className="relative w-full h-full flex items-center justify-center px-2">
+                      <div className="relative w-full h-full flex items-center justify-center p-2">
                         <ImageWithFallback
                           src={client.logoUrl}
                           alt={client.name}
