@@ -16,7 +16,7 @@ export function Hero({ data }: { data: any }) {
   const imageUrl = data?.imageUrl || "https://images.unsplash.com/photo-1758599543136-5977bf2dd922?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYWxlJTIwcG9ydHJhaXQlMjBidXNpbmVzcyUyMHN1aXQlMjBjb25maWRlbnR8ZW58MXx8fHwxNzcxNzAwNTczfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
 
   return (
-    <section id="home" className="min-h-screen flex items-center pt-20 bg-gradient-to-br from-slate-50 to-slate-100 overflow-hidden relative">
+    <section id="home" className="min-h-screen flex items-center pt-32 md:pt-20 bg-gradient-to-br from-slate-50 to-slate-100 overflow-hidden relative">
       {/* Background Decor */}
       <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
       <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-indigo-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
@@ -34,7 +34,7 @@ export function Hero({ data }: { data: any }) {
             <span className="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-800 text-sm font-semibold mb-6">
               {t(data?.badge) || "Elevating digital projects"}
             </span>
-            <h1 className="text-5xl md:text-7xl font-bold text-slate-900 mb-6 leading-tight">
+            <h1 className="text-4xl md:text-7xl font-bold text-slate-900 mb-6 leading-tight">
               {firstName} <br />
               <span className="text-blue-600">{lastName}</span>
             </h1>
