@@ -32,12 +32,16 @@ jobs:
           password: ${{ secrets.HOSTINGER_SSH_PASSWORD }}
           port: ${{ secrets.HOSTINGER_SSH_PORT }}
           script: |
-            echo "Cleaning up public_html..."
-            # Remove typical Hostinger default files (case insensitive attempt)
-            rm -f public_html/default.php public_html/Default.php
-            rm -f public_html/index.php public_html/Index.php
-            rm -f public_html/php.ini
-            rm -f public_html/index.html
+            # Try both possible paths
+            for path in "public_html" "domains/carloscanofernandez.com/public_html"; do
+              if [ -d "$path" ]; then
+                echo "Cleaning up $path..."
+                rm -f "$path/default.php" "$path/Default.php"
+                rm -f "$path/index.php" "$path/Index.php"
+                rm -f "$path/php.ini"
+                rm -f "$path/index.html"
+              fi
+            done
             echo "Cleanup done."
 
       - name: Deploy via SCP
@@ -48,6 +52,6 @@ jobs:
           password: ${{ secrets.HOSTINGER_SSH_PASSWORD }}
           port: ${{ secrets.HOSTINGER_SSH_PORT }}
           source: "out/*,out/**/*"
-          target: "public_html"
+          target: "domains/carloscanofernandez.com/public_html"
           strip_components: 1
           overwrite: true
