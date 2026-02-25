@@ -18,10 +18,9 @@ export function Contact() {
             viewport={{ once: true }}
             className="flex-1"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Let's work together</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Let's Talk!</h2>
             <p className="text-slate-400 text-lg mb-12 leading-relaxed">
-              I'm always interested in hearing about new projects and opportunities.
-              Whether you have a question or just want to say hi, feel free to drop me a message.
+              If you’d like to connect or say hello, don’t hesitate to drop me a message.
             </p>
 
             <div className="space-y-6">
