@@ -1,16 +1,18 @@
 "use client";
 
 import { motion } from "motion/react";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { ArrowRight, Download } from "lucide-react";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { useLanguage } from "../context/LanguageContext";
 
 export function Hero({ data }: { data: any }) {
+  const { t } = useLanguage();
 
   const titleStr = data?.title || "Carlos Cano Fernández";
   const lastSpaceIdx = titleStr.lastIndexOf(' ');
   const firstName = lastSpaceIdx !== -1 ? titleStr.substring(0, lastSpaceIdx) : titleStr;
   const lastName = lastSpaceIdx !== -1 ? titleStr.substring(lastSpaceIdx + 1) : "";
-  const subtitle = data?.subtitle || "Full Stack Developer";
+  const subtitle = t(data?.subtitle) || "Full Stack Developer";
   const imageUrl = data?.imageUrl || "https://images.unsplash.com/photo-1758599543136-5977bf2dd922?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYWxlJTIwcG9ydHJhaXQlMjBidXNpbmVzcyUyMHN1aXQlMjBjb25maWRlbnR8ZW58MXx8fHwxNzcxNzAwNTczfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral";
 
   return (
@@ -30,7 +32,7 @@ export function Hero({ data }: { data: any }) {
             className="flex-1 text-center md:text-left"
           >
             <span className="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-800 text-sm font-semibold mb-6">
-              {data?.badge || "Elevating digital projects"}
+              {t(data?.badge) || "Elevating digital projects"}
             </span>
             <h1 className="text-5xl md:text-7xl font-bold text-slate-900 mb-6 leading-tight">
               {firstName} <br />
@@ -55,7 +57,7 @@ export function Hero({ data }: { data: any }) {
                 href="#contact"
                 className="px-8 py-4 bg-slate-900 text-white rounded-full font-medium hover:bg-slate-800 transition-all flex items-center justify-center gap-2 group shadow-lg shadow-slate-900/20"
               >
-                Contact Me
+                {t({ en: "Contact Me", es: "Contáctame" })}
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </a>
               <a
@@ -63,7 +65,7 @@ export function Hero({ data }: { data: any }) {
                 download="CV-Carlos-Cano-Fernandez.pdf"
                 className="px-8 py-4 bg-white text-slate-900 border border-slate-200 rounded-full font-medium hover:border-blue-200 hover:bg-blue-50 transition-all flex items-center justify-center gap-2 group print:hidden"
               >
-                Download CV
+                {t({ en: "Download CV", es: "Descargar CV" })}
                 <Download size={18} className="group-hover:translate-y-1 transition-transform" />
               </a>
             </div>
@@ -98,8 +100,8 @@ export function Hero({ data }: { data: any }) {
                   {data?.experienceYears || "10+"}
                 </div>
                 <div>
-                  <p className="text-xs text-slate-500 font-semibold uppercase tracking-wide">Years of</p>
-                  <p className="font-bold text-slate-900">Experience</p>
+                  <p className="text-xs text-slate-500 font-semibold uppercase tracking-wide">{t({ en: "Years of", es: "Años de" })}</p>
+                  <p className="font-bold text-slate-900">{t({ en: "Experience", es: "Experiencia" })}</p>
                 </div>
               </motion.div>
             </div>

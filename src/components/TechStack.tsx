@@ -2,14 +2,19 @@
 
 import { motion } from "motion/react";
 import { Database, Search, Bot, Briefcase, Layers, Terminal, Cpu, Globe } from "lucide-react";
+import { useLanguage } from "../context/LanguageContext";
 
 export function TechStack() {
+  const { t } = useLanguage();
   const categories = [
     {
       id: "tracking",
-      title: "Tracking & Analytics",
+      title: t({ en: "Tracking & Analytics", es: "Tracking y Analítica" }),
       icon: <Database className="w-6 h-6 text-blue-500" />,
-      description: "Data integrity and advanced measurement architectures.",
+      description: t({
+        en: "Data integrity and advanced measurement architectures.",
+        es: "Integridad de datos y arquitecturas de medición avanzada."
+      }),
       tools: [
         "GTM (client & server)", "GA4", "GSC", "Looker Studio", "BigQuery",
         "Server-to-server tracking", "Meta CAPI", "TikTok API", "Adjust",
@@ -20,7 +25,10 @@ export function TechStack() {
       id: "seo",
       title: "SEO & Crawling",
       icon: <Search className="w-6 h-6 text-emerald-500" />,
-      description: "Technical SEO auditing and log analysis for maximum visibility.",
+      description: t({
+        en: "Technical SEO auditing and log analysis for maximum visibility.",
+        es: "Auditoría SEO técnica y análisis de logs para máxima visibilidad."
+      }),
       tools: [
         "Screaming Frog", "Jet Octopus", "Botify", "Sistrix", "Ahrefs", "Semrush",
         "Log analyzers", "Render testing", "WPO tools"
@@ -28,9 +36,12 @@ export function TechStack() {
     },
     {
       id: "ai",
-      title: "AI & Automation",
+      title: t({ en: "AI & Automation", es: "IA y Automatización" }),
       icon: <Bot className="w-6 h-6 text-purple-500" />,
-      description: "Leveraging LLMs and scripts for process automation.",
+      description: t({
+        en: "Leveraging LLMs and scripts for process automation.",
+        es: "Uso de LLMs y scripts para la automatización de procesos."
+      }),
       tools: [
         "Python", "Claude Code", "Google Antigravity",
         "ChatGPT", "Gemini", "LangChain", "LLM agents",
@@ -39,9 +50,12 @@ export function TechStack() {
     },
     {
       id: "product",
-      title: "Product / Project",
+      title: t({ en: "Product / Project", es: "Producto / Proyecto" }),
       icon: <Briefcase className="w-6 h-6 text-orange-500" />,
-      description: "Agile management and product lifecycle oversight.",
+      description: t({
+        en: "Agile management and product lifecycle oversight.",
+        es: "Gestión ágil y supervisión del ciclo de vida del producto."
+      }),
       tools: [
         "Jira", "Notion", "Confluence", "Asana",
         "Roadmap planning", "User stories", "QA & testing"
@@ -66,13 +80,16 @@ export function TechStack() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800 border border-slate-700 text-blue-400 text-sm font-semibold mb-6">
             <Cpu size={14} />
-            <span>Technical Arsenal</span>
+            <span>{t({ en: "Technical Arsenal", es: "Arsenal Técnico" })}</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
             Tech Stack & <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Tools</span>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto text-lg">
-            A deep dive into the technologies and platforms I use to drive data-centric decisions and scalable product growth.
+            {t({
+              en: "A deep dive into the technologies and platforms I use to drive data-centric decisions and scalable product growth.",
+              es: "Una inmersión profunda en las tecnologías y plataformas que utilizo para impulsar decisiones centradas en datos y un crecimiento de producto escalable."
+            })}
           </p>
         </motion.div>
 

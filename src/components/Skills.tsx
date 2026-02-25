@@ -2,8 +2,11 @@
 
 import { motion } from "motion/react";
 import { Globe, Server, Bot, Briefcase, BarChart } from "lucide-react";
+import { useLanguage } from "../context/LanguageContext";
+import { cvData } from "../lib/data";
 
-export function Skills({ data }: { data?: any }) {
+export function Skills({ data }: { data?: any[] }) {
+  const { t } = useLanguage();
   const areas = [
     {
       title: "SEO & GEO / AEO",
@@ -60,9 +63,12 @@ export function Skills({ data }: { data?: any }) {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Areas of Specialization</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{t(cvData.common.sections.specializationTitle)}</h2>
           <p className="text-slate-600 max-w-2xl mx-auto">
-            Deep expertise across technical, strategic, and product domains.
+            {t({
+              en: "Deep expertise across technical, strategic, and product domains.",
+              es: "Experiencia profunda en los dominios técnico, estratégico y de producto."
+            })}
           </p>
         </motion.div>
 
@@ -87,12 +93,12 @@ export function Skills({ data }: { data?: any }) {
                     <IconComponent className="w-8 h-8 text-blue-600" />
                   </div>
                   <h3 className="text-lg font-bold text-slate-900 leading-tight">
-                    {area.title}
+                    {t(area.title)}
                   </h3>
                 </div>
 
                 <ul className="space-y-4">
-                  {area.items.map((item: string, i: number) => (
+                  {t(area.items).map((item: string, i: number) => (
                     <li key={i} className="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
                       <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0"></span>
                       <span>{item}</span>

@@ -1,9 +1,12 @@
 "use client";
 
+import { useLanguage } from "../context/LanguageContext";
+import { cvData } from "../lib/data";
 import { motion } from "motion/react";
 import { Briefcase, MapPin } from "lucide-react";
 
-export function Experience({ data }: { data?: any }) {
+export function Experience({ data }: { data?: any[] }) {
+  const { t } = useLanguage();
   const experiences = [
     {
       role: "Head of SEO, GEO & Data Tracking",
@@ -85,7 +88,7 @@ export function Experience({ data }: { data?: any }) {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Professional Journey</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{t(cvData.common.sections.experienceTitle)}</h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
         </motion.div>
 
@@ -111,8 +114,8 @@ export function Experience({ data }: { data?: any }) {
                     <div className="md:hidden absolute -left-[41px] top-8 w-5 h-5 rounded-full bg-blue-600 border-4 border-slate-50 shadow-sm"></div>
 
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
-                      <h3 className="text-xl font-bold text-slate-900">{exp.role}</h3>
-                      <span className="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full whitespace-nowrap w-fit">{exp.period}</span>
+                      <h3 className="text-xl font-bold text-slate-900">{t(exp.role)}</h3>
+                      <span className="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full whitespace-nowrap w-fit">{t(exp.period)}</span>
                     </div>
 
                     <div className="flex items-center gap-4 mb-6 text-sm">
@@ -122,12 +125,12 @@ export function Experience({ data }: { data?: any }) {
                       </div>
                       <div className="flex items-center gap-1 text-slate-500">
                         <MapPin size={16} className="text-slate-400" />
-                        {exp.location}
+                        {t(exp.location)}
                       </div>
                     </div>
 
                     <ul className="space-y-3">
-                      {exp.bullets.map((bullet: string, i: number) => (
+                      {(t(exp.bullets) as string[]).map((bullet: string, i: number) => (
                         <li key={i} className="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
                           <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0"></span>
                           <span>{bullet}</span>

@@ -1,9 +1,11 @@
 "use client";
 
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { useLanguage } from "../context/LanguageContext";
 import { motion } from "motion/react";
 
 export function Clients({ data }: { data?: any[] }) {
+  const { t } = useLanguage();
   const displayClients = data && data.length > 0 ? data : [];
 
   return (
@@ -16,10 +18,13 @@ export function Clients({ data }: { data?: any[] }) {
           className="text-center mb-16"
         >
           <span className="text-blue-600 font-bold uppercase tracking-widest text-sm mb-4 block">
-            TRUST & EXPERIENCE
+            {t({ en: "TRUST & EXPERIENCE", es: "CONFIANZA Y EXPERIENCIA" })}
           </span>
           <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 max-w-3xl mx-auto leading-tight">
-            Brands that have trusted my strategic vision
+            {t({
+              en: "Brands that have trusted my strategic vision",
+              es: "Marcas que han confiado en mi visión estratégica"
+            })}
           </h2>
           <div className="w-20 h-1.5 bg-blue-600 mx-auto rounded-full mb-8"></div>
         </motion.div>
@@ -58,7 +63,7 @@ export function Clients({ data }: { data?: any[] }) {
                     {client.name}
                   </h3>
                   <p className="text-[10px] md:text-xs font-semibold text-slate-400 uppercase tracking-wider">
-                    {client.category || "DIGITAL CONSULTANCY"}
+                    {t(client.category) || t({ en: "DIGITAL CONSULTANCY", es: "CONSULTORÍA DIGITAL" })}
                   </p>
                 </div>
               </motion.div>

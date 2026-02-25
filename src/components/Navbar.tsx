@@ -3,10 +3,13 @@
 import { motion } from "motion/react";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { useLanguage } from "../context/LanguageContext";
+import { cvData } from "../lib/data";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,16 +20,20 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Specialization", href: "#specialization" },
-    { name: "Skills", href: "#core-soft-skills" },
-    { name: "Clients", href: "#clients" },
-    { name: "Tech", href: "#tech-stack" },
-    { name: "Experience", href: "#experience" },
-    { name: "Education", href: "#education" },
-    { name: "Contact", href: "#contact" },
+    { name: t(cvData.common.nav.home), href: "#home" },
+    { name: t(cvData.common.nav.about), href: "#about" },
+    { name: t(cvData.common.nav.specialization), href: "#specialization" },
+    { name: t(cvData.common.nav.skills), href: "#core-soft-skills" },
+    { name: t(cvData.common.nav.clients), href: "#clients" },
+    { name: t(cvData.common.nav.tech), href: "#tech-stack" },
+    { name: t(cvData.common.nav.experience), href: "#experience" },
+    { name: t(cvData.common.nav.education), href: "#education" },
+    { name: t(cvData.common.nav.contact), href: "#contact" },
   ];
+
+  const handleLanguageToggle = () => {
+    setLanguage(language === 'en' ? 'es' : 'en');
+  };
 
   return (
     <nav
@@ -43,7 +50,7 @@ export function Navbar() {
         </a>
 
         {/* Desktop Menu */}
-        <div className="hidden xl:flex space-x-6">
+        <div className="hidden xl:flex items-center space-x-6">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -54,15 +61,37 @@ export function Navbar() {
               <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
+
+          {/* Language Switcher */}
+          <button
+            onClick={handleLanguageToggle}
+            className="ml-4 px-3 py-1.5 rounded-full border border-slate-200 text-xs font-bold text-slate-600 hover:bg-slate-50 hover:border-blue-400 hover:text-blue-600 transition-all flex items-center gap-1.5"
+          >
+            <span className={language === 'es' ? 'text-blue-600' : 'opacity-40'}>ES</span>
+            <span className="w-px h-3 bg-slate-200"></span>
+            <span className={language === 'en' ? 'text-blue-600' : 'opacity-40'}>EN</span>
+          </button>
         </div>
 
-        {/* Mobile Menu Button - Show on smaller screens (below xl) */}
-        <button
-          className="xl:hidden text-slate-800 focus:outline-none"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        {/* Mobile controls */}
+        <div className="xl:hidden flex items-center gap-4">
+          {/* Mobile Language Switcher */}
+          <button
+            onClick={handleLanguageToggle}
+            className="px-2.5 py-1 rounded-full border border-slate-200 text-[10px] font-bold text-slate-600 transition-all flex items-center gap-1"
+          >
+            <span className={language === 'es' ? 'text-blue-600' : 'opacity-40'}>ES</span>
+            <span className="w-px h-2 bg-slate-200"></span>
+            <span className={language === 'en' ? 'text-blue-600' : 'opacity-40'}>EN</span>
+          </button>
+
+          <button
+            className="text-slate-800 focus:outline-none"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}

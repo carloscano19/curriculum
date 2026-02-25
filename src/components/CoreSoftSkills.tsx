@@ -2,24 +2,26 @@
 
 import { motion } from "motion/react";
 import { CheckCircle2, Brain, Users, MessageSquare, Lightbulb, TrendingUp, Code, Database, Server, Smartphone, LayoutDashboard } from "lucide-react";
+import { useLanguage } from "../context/LanguageContext";
 
 export function CoreSoftSkills() {
+  const { t } = useLanguage();
   const softSkills = [
-    { name: "Strategic mindset", icon: <Brain className="w-5 h-5 text-emerald-400" /> },
-    { name: "High ownership & accountability", icon: <CheckCircle2 className="w-5 h-5 text-emerald-400" /> },
-    { name: "Cross-functional collaboration", icon: <Users className="w-5 h-5 text-emerald-400" /> },
-    { name: "Technical & business communication", icon: <MessageSquare className="w-5 h-5 text-emerald-400" /> },
-    { name: "Problem-solving under pressure", icon: <Lightbulb className="w-5 h-5 text-emerald-400" /> },
-    { name: "Data-driven decision-making", icon: <TrendingUp className="w-5 h-5 text-emerald-400" /> },
+    { name: t({ en: "Strategic mindset", es: "Mentalidad estratégica" }), icon: <Brain className="w-5 h-5 text-emerald-400" /> },
+    { name: t({ en: "High ownership & accountability", es: "Alto compromiso y responsabilidad" }), icon: <CheckCircle2 className="w-5 h-5 text-emerald-400" /> },
+    { name: t({ en: "Cross-functional collaboration", es: "Colaboración interfuncional" }), icon: <Users className="w-5 h-5 text-emerald-400" /> },
+    { name: t({ en: "Technical & business communication", es: "Comunicación técnica y de negocio" }), icon: <MessageSquare className="w-5 h-5 text-emerald-400" /> },
+    { name: t({ en: "Problem-solving under pressure", es: "Resolución de problemas bajo presión" }), icon: <Lightbulb className="w-5 h-5 text-emerald-400" /> },
+    { name: t({ en: "Data-driven decision-making", es: "Toma de decisiones basada en datos" }), icon: <TrendingUp className="w-5 h-5 text-emerald-400" /> },
   ];
 
   const coreSkills = [
     { name: "Technical SEO & GEO", icon: <Code className="w-5 h-5 text-blue-400" /> },
     { name: "GTM client/server", icon: <Server className="w-5 h-5 text-blue-400" /> },
     { name: "Server-to-server tracking", icon: <Database className="w-5 h-5 text-blue-400" /> },
-    { name: "Python & AI automation", icon: <BotIcon className="w-5 h-5 text-blue-400" /> },
+    { name: t({ en: "Python & AI automation", es: "Python y automatización con IA" }), icon: <BotIcon className="w-5 h-5 text-blue-400" /> },
     { name: "Product Ownership", icon: <Smartphone className="w-5 h-5 text-blue-400" /> },
-    { name: "Data analytics & dashboards", icon: <LayoutDashboard className="w-5 h-5 text-blue-400" /> },
+    { name: t({ en: "Data analytics & dashboards", es: "Analítica de datos y dashboards" }), icon: <LayoutDashboard className="w-5 h-5 text-blue-400" /> },
   ];
 
   return (
