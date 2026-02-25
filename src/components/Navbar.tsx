@@ -36,7 +36,7 @@ export function Navbar() {
       <div className="container mx-auto px-6 flex justify-between items-center">
         <a href="#" className="shrink-0 mr-8 flex items-center">
           <img
-            src="/Logo CCF adaptado.png"
+            src="/logo_transparente.png"
             alt="Logo CCF"
             className="h-20 w-auto object-contain hover:opacity-80 transition-opacity"
           />

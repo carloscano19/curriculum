@@ -1,5 +1,6 @@
 import { Navbar } from "../components/Navbar";
 import { Hero } from "../components/Hero";
+import { BackToTop } from "../components/BackToTop";
 import { About } from "../components/About";
 import { Skills } from "../components/Skills";
 import { CoreSoftSkills } from "../components/CoreSoftSkills";
@@ -25,6 +26,7 @@ export default function Home() {
         <Experience data={cvData.experience} />
         <Education data={cvData.education} />
         <Contact />
+        <BackToTop />
       </main>
       <Footer />
     </div>
