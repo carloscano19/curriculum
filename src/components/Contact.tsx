@@ -73,7 +73,7 @@ export function Contact() {
             viewport={{ once: true }}
             className="flex-1"
           >
-            <form action="https://formspree.io/f/mqaeobnd" method="POST" className="bg-white p-8 rounded-3xl shadow-2xl text-slate-900">
+            <form action="https://formspree.io/f/meelvnav" method="POST" className="bg-white p-8 rounded-3xl shadow-2xl text-slate-900">
               <div className="mb-6">
                 <label className="block text-sm font-semibold text-slate-700 mb-2">Your Name</label>
                 <input
