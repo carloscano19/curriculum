@@ -24,17 +24,23 @@ jobs:
       - name: Build and Export
         run: npm run build
 
-      - name: Cleanup Hostinger Default Files
+      - name: Cleanup Hostinger and Debug
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.HOSTINGER_SSH_HOST }}
           username: ${{ secrets.HOSTINGER_SSH_USER }}
           password: ${{ secrets.HOSTINGER_SSH_PASSWORD }}
-          port: ${{ secrets.HOSTINGER_SSH_PORT || 2022 }}
+          port: ${{ secrets.HOSTINGER_SSH_PORT || 22 }}
           script: |
+            echo "Current files in public_html:"
+            ls -la public_html
+            echo "Deleting default and existing files..."
             rm -f public_html/default.php
             rm -f public_html/index.php
             rm -f public_html/php.ini
+            rm -f public_html/index.html
+            # Clean up potential parking page files
+            find public_html -maxdepth 1 -name "hostinger*" -delete
 
       - name: Deploy via SCP
         uses: appleboy/scp-action@v0.1.7
@@ -43,7 +49,7 @@ jobs:
           username: ${{ secrets.HOSTINGER_SSH_USER }}
           password: ${{ secrets.HOSTINGER_SSH_PASSWORD }}
           port: ${{ secrets.HOSTINGER_SSH_PORT || 22 }}
-          source: "out/**"
+          source: "out/*,out/**/*"
           target: "public_html"
           strip_components: 1
           overwrite: true
