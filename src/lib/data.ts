@@ -157,16 +157,16 @@ export const cvData = {
         { name: "English", level: "Professional Proficiency", percentage: 85, color: "bg-blue-500" }
     ],
     clients: [
-        { name: "Real Madrid", logoUrl: "/real-madrid.png", category: "DEPORTE & ENTRETENIMIENTO" },
-        { name: "Iberdrola", logoUrl: "/iberdrola.png", category: "ENERGÍA & SOSTENIBILIDAD" },
-        { name: "William Hill", logoUrl: "/william-hill.png", category: "APUESTAS & JUEGO ONLINE" },
-        { name: "Caser", logoUrl: "/Caser.png", category: "SEGUROS & SALUD" },
-        { name: "Parques Reunidos", logoUrl: "/parques_reunidos.png", category: "OCIO & ENTRETENIMIENTO" },
-        { name: "P&G", logoUrl: "/P&G.png", category: "CONSUMO & RETAIL" },
-        { name: "Barceló Hotels", logoUrl: "/Barcelo-hotels.png", category: "TURISMO & HOSTELERÍA" },
-        { name: "Mahou", logoUrl: "/mahou.png", category: "ALIMENTACIÓN & BEBIDAS" },
-        { name: "Grupo Yoigo", logoUrl: "/Yoigo.png", category: "TELECOMUNICACIONES" },
-        { name: "Camper", logoUrl: "/camper.png", category: "MODA & RETAIL" }
+        { name: "Real Madrid", logoUrl: "/real-madrid.png", category: "SPORTS & ENTERTAINMENT" },
+        { name: "Iberdrola", logoUrl: "/iberdrola.png", category: "ENERGY & SUSTAINABILITY" },
+        { name: "William Hill", logoUrl: "/william-hill.png", category: "BETTING & ONLINE GAMING" },
+        { name: "Caser", logoUrl: "/Caser.png", category: "INSURANCE & HEALTH" },
+        { name: "Parques Reunidos", logoUrl: "/parques_reunidos.png", category: "LEISURE & ENTERTAINMENT" },
+        { name: "P&G", logoUrl: "/P&G.png", category: "CONSUMER GOODS & RETAIL" },
+        { name: "Barceló Hotels", logoUrl: "/Barcelo-hotels.png", category: "TOURISM & HOSPITALITY" },
+        { name: "Mahou", logoUrl: "/mahou.png", category: "FOOD & BEVERAGES" },
+        { name: "Grupo Yoigo", logoUrl: "/Yoigo.png", category: "TELECOMMUNICATIONS" },
+        { name: "Camper", logoUrl: "/camper.png", category: "FASHION & RETAIL" }
     ],
     skills: [
         { name: "React", category: "Frontend", icon: "react" },
