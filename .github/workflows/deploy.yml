@@ -38,6 +38,7 @@ jobs:
                 echo "Cleaning up $path..."
                 rm -f "$path/default.php" "$path/Default.php"
                 rm -f "$path/index.php" "$path/Index.php"
+                rm -f "$path/favicon.ico"
                 rm -f "$path/php.ini"
                 rm -f "$path/index.html"
               fi
