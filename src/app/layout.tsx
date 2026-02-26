@@ -20,11 +20,24 @@ export const metadata: Metadata = {
     siteName: "Carlos Cano Fernández CV",
     locale: "es_ES",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image.png?v=2",
+        width: 1200,
+        height: 630,
+        alt: "Carlos Cano Fernández | SEO & GEO Lead",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Carlos Cano Fernández | SEO & GEO Lead",
     description: "Senior specialist in Technical SEO, GEO (Generative Engine Optimization) and data-driven growth strategies.",
+    images: ["/twitter-image.png?v=2"],
+  },
+  icons: {
+    icon: "/icon.png?v=2",
+    apple: "/apple-icon.png?v=2",
   },
 };
 
