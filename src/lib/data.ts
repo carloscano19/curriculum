@@ -247,10 +247,10 @@ export const cvData = {
         { name: "Caser", logoUrl: "/Caser.png", category: { en: "INSURANCE & HEALTH", es: "SEGUROS & SALUD" } },
         { name: "Parques Reunidos", logoUrl: "/parques_reunidos.png", category: { en: "LEISURE & ENTERTAINMENT", es: "OCIO & ENTRETENIMIENTO" } },
         { name: "P&G", logoUrl: "/P&G.png", category: { en: "CONSUMER GOODS & RETAIL", es: "CONSUMO & RETAIL" } },
-        { name: "Barceló Hotels", logoUrl: "/Barcelo-hotels.png", category: { en: "TOURISM & HOSPITALITY", es: "TURISMO & HOSTELERÍA" } },
+        { name: "Socios.com", logoUrl: "/socios-com.png", category: { en: "WEB3 & DEPORTE", es: "WEB3 & SPORTS" } },
         { name: "Mahou", logoUrl: "/mahou.png", category: { en: "FOOD & BEVERAGES", es: "ALIMENTACIÓN & BEBIDAS" } },
         { name: "Grupo Yoigo", logoUrl: "/Yoigo.png", category: { en: "TELECOMMUNICATIONS", es: "TELECOMUNICACIONES" } },
-        { name: "Camper", logoUrl: "/camper.png", category: { en: "FASHION & RETAIL", es: "MODA & RETAIL" } }
+        { name: "Chiliz", logoUrl: "/chiliz.png", category: { en: "WEB3 & BLOCKCHAIN", es: "WEB3 & BLOCKCHAIN" } }
     ],
     skills: [
         { name: "React", category: "Frontend", icon: "react" },
