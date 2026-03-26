@@ -52,13 +52,19 @@ export function Hero({ data }: { data: any }) {
               )}
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start flex-wrap">
               <a
                 href="#contact"
                 className="px-8 py-4 bg-slate-900 text-white rounded-full font-medium hover:bg-slate-800 transition-all flex items-center justify-center gap-2 group shadow-lg shadow-slate-900/20"
               >
                 {t({ en: "Contact Me", es: "Contáctame" })}
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              </a>
+              <a
+                href="/apphub"
+                className="px-8 py-4 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition-all flex items-center justify-center gap-2 group shadow-lg shadow-blue-600/30"
+              >
+                🚀 {t({ en: "Explore AppHub", es: "Explorar AppHub" })}
               </a>
               <a
                 href={data?.cvPdfUrl || "#"}

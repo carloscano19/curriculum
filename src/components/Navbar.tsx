@@ -62,6 +62,14 @@ export function Navbar() {
             </a>
           ))}
 
+          {/* AppHub CTA */}
+          <a
+            href="/apphub"
+            className="px-4 py-2 bg-slate-50 border border-slate-200 text-blue-600 font-bold rounded-xl hover:bg-blue-50 hover:border-blue-300 transition-all flex items-center gap-2 text-sm ml-2"
+          >
+            🚀 AppHub
+          </a>
+
           {/* Language Switcher */}
           <button
             onClick={handleLanguageToggle}
@@ -112,6 +120,13 @@ export function Navbar() {
               {link.name}
             </a>
           ))}
+          <a
+            href="/apphub"
+            className="text-blue-600 hover:text-blue-700 font-bold py-2 border-b border-slate-100 last:border-0"
+            onClick={() => setIsOpen(false)}
+          >
+            🚀 AppHub
+          </a>
         </motion.div>
       )}
     </nav>
