@@ -87,7 +87,7 @@ export default function AppHub() {
             Applications & <span className="text-blue-600">Tools</span>
           </h1>
           <p className="text-slate-500 text-lg md:text-xl leading-relaxed font-medium">
-            An interactive directory of specialized SEO tools, custom dashboards, and automated systems I've developed to scale operations.
+            An interactive directory of specialized SEO tools, custom dashboards, and automated systems I&apos;ve developed to scale operations.
           </p>
         </div>
 
