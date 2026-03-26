@@ -101,30 +101,30 @@ export default function AppHub() {
                 href={app.href} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="group relative p-8 rounded-2xl bg-white border border-slate-100 transition-all duration-300 hover:-translate-y-1 overflow-hidden flex flex-col h-full shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.1),0_10px_10px_-5px_rgba(0,0,0,0.04)]"
+                className="group relative p-8 rounded-2xl bg-white border border-slate-100 transition-all duration-300 hover:-translate-y-1 hover:border-blue-200 overflow-hidden flex flex-col h-full shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05),0_10px_20px_-2px_rgba(0,0,0,0.02)] hover:shadow-xl hover:shadow-blue-500/5"
               >
                 {/* Subtle Hover Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-br from-slate-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                 {/* Top Row: Icon & Link Arrow */}
-                <div className="relative flex justify-between items-start mb-6 pb-4 border-b border-slate-50">
-                  <div className={`p-3 rounded-xl ${app.iconBg} border ${app.iconBorder} transition-colors ${app.iconColor}`}>
+                <div className="relative flex justify-between items-start mb-6 pb-4 border-b border-slate-50 group-hover:border-blue-50/50 transition-colors">
+                  <div className={`p-3 rounded-xl bg-white border border-slate-100 shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:shadow-md ${app.iconColor}`}>
                     <Icon size={24} strokeWidth={2} />
                   </div>
-                  <div className="p-2 rounded-full bg-slate-50 text-slate-400 group-hover:text-slate-900 group-hover:bg-slate-100 transition-colors">
+                  <div className="p-2 rounded-full bg-slate-50 text-slate-400 group-hover:text-blue-600 group-hover:bg-blue-50 transition-all duration-300 group-hover:rotate-12">
                     <ArrowUpRight size={18} />
                   </div>
                 </div>
 
                 {/* Content */}
                 <div className="relative flex-1 flex flex-col">
-                  <h3 className="text-xl font-bold text-slate-900 mb-2 tracking-tight">{app.title}</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-1 font-medium">{app.description}</p>
+                  <h3 className="text-xl font-bold text-slate-900 mb-2 tracking-tight group-hover:text-blue-600 transition-colors duration-300">{app.title}</h3>
+                  <p className="text-slate-500 text-sm leading-relaxed mb-6 flex-1 font-medium group-hover:text-slate-600 transition-colors">{app.description}</p>
                 </div>
 
                 {/* Bottom Row */}
-                <div className="relative pt-4 flex items-center justify-between mt-auto border-t border-slate-50">
-                  <span className="text-xs font-bold text-slate-400 group-hover:text-slate-600 transition-colors uppercase tracking-wider">Launch Application</span>
+                <div className="relative pt-4 flex items-center justify-between mt-auto border-t border-slate-50 group-hover:border-blue-50/50 transition-colors">
+                  <span className="text-xs font-bold text-slate-400 group-hover:text-blue-600 transition-colors uppercase tracking-wider">Launch Application</span>
                   <div className="relative flex items-center justify-center w-4 h-4">
                     <span className="absolute w-2.5 h-2.5 rounded-full bg-emerald-500/20 group-hover:w-4 group-hover:h-4 animate-pulse transition-all duration-300"></span>
                     <span className="relative w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]"></span>
